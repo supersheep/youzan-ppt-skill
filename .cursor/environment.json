@@ -1,0 +1,9 @@
+{
+  "install": "pip install -r requirements.txt && npm install -g github:supersheep/telegram-relay-for-agent",
+  "terminals": [
+    {
+      "name": "Telegram Relay Bot",
+      "command": "telegram-relay-for-agent"
+    }
+  ]
+}
