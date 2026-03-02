@@ -4,6 +4,42 @@
 
 参考 `~/.cursor/skills/youzan-ppt-maker` 技能（同源）。
 
+## 场景化生成（新增）
+
+已支持按业务场景拆分生成逻辑：每个场景都有独立 `SKILL.md` 与 scene generator。
+
+- 场景目录：[`scenarios/`](scenarios/README.md)
+- 生成脚本：`scripts/generate_scene_slides.py`
+
+### 列出全部场景
+
+```bash
+python scripts/generate_scene_slides.py --list-scenes
+```
+
+### 批量生成 slides.md（推荐）
+
+```bash
+python scripts/generate_scene_slides.py \
+  --plan-file scripts/sample_scene_plan.json \
+  -o slides.md
+```
+
+### 生成单场景 slides.md
+
+```bash
+python scripts/generate_scene_slides.py \
+  --scene demand_pure_collection \
+  --input-json '{"flow_nodes":["消费者","私域商城/门店交易","有赞收款","商家银行账户"]}' \
+  -o slides.md
+```
+
+再转 PDF：
+
+```bash
+python scripts/generate_pdf.py slides.md -o output.pdf --title "有赞支付" --subtitle "收款&分账解决方案"
+```
+
 ## 快速开始
 
 ```bash

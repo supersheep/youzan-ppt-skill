@@ -9,6 +9,33 @@ description: 给老婆公司做 ppt 用的。从 PDF 底料生成销售讲义 PD
 
 **技能路径**：`~/Projects/youzan-ppt-skill` 或 `~/.cursor/skills/youzan-ppt-maker`（同源）
 
+## 场景化工作流（新增）
+
+当用户明确提出具体业务场景（如“门店抽佣”“公域平台分账”）时，优先走场景化生成：
+
+1. 根据场景选择对应 `scene_id`（见 `scenarios/README.md`）
+2. 读取对应场景 `SKILL.md`
+3. 调用 `scripts/generate_scene_slides.py` 生成 `slides.md`
+4. 再用 `scripts/generate_pdf.py` 输出 PDF
+
+示例：
+
+```bash
+# 列出可用场景
+python ~/Projects/youzan-ppt-skill/scripts/generate_scene_slides.py --list-scenes
+
+# 批量场景生成 slides.md
+python ~/Projects/youzan-ppt-skill/scripts/generate_scene_slides.py \
+  --plan-file ~/Projects/youzan-ppt-skill/scripts/sample_scene_plan.json \
+  -o ~/Projects/youzan-ppt-skill/ppt/slides.md
+
+# 再转 PDF
+python ~/Projects/youzan-ppt-skill/scripts/generate_pdf.py \
+  ~/Projects/youzan-ppt-skill/ppt/slides.md \
+  -o ~/Projects/youzan-ppt-skill/ppt/output.pdf \
+  --title "有赞支付" --subtitle "收款&分账解决方案"
+```
+
 ## 前置：必须「看到」的两样东西
 
 ### 1. 底料的结构（而非仅文本）

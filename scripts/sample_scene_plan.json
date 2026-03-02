@@ -1,0 +1,58 @@
+{
+  "cover": {
+    "title": "有赞支付",
+    "subtitle": "收款&分账解决方案",
+    "points": [
+      "全渠道收款",
+      "智能高效分账",
+      "门店/生意增长"
+    ]
+  },
+  "scenes": [
+    {
+      "scene": "business_upgrade_dual_panel",
+      "input": {
+        "title": "有赞支付助力商家业务模式升级"
+      }
+    },
+    {
+      "scene": "one_map_overview"
+    },
+    {
+      "scene": "product_collection",
+      "input": {
+        "title": "产品介绍&价值点：有赞收款"
+      }
+    },
+    {
+      "scene": "demand_pure_collection"
+    },
+    {
+      "scene": "demand_collection_with_split"
+    },
+    {
+      "scene": "demand_mixed_channel_split"
+    },
+    {
+      "scene": "value_pyramid"
+    },
+    {
+      "scene": "split_account_overview"
+    },
+    {
+      "scene": "store_commission"
+    },
+    {
+      "scene": "franchise_fee_management"
+    },
+    {
+      "scene": "public_platform_split"
+    },
+    {
+      "scene": "stored_value_split"
+    },
+    {
+      "scene": "rights_card_split"
+    }
+  ]
+}
