@@ -1,0 +1,5 @@
+reportlab>=4.0.0
+pypdf>=3.0.0
+# 可选：HTML→PDF 效果更佳
+# playwright>=1.40.0  # 需额外运行: playwright install chromium
+# weasyprint>=60.0    # 或 weasyprint，直接渲染 HTML
